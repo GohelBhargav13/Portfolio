@@ -13,7 +13,7 @@ const NavBar = () => {
                     <li className='text-white text-base hover:bg-slate-700 font-mono hover:text-shadow-white hover:duration-500 hover:p-1 px-0.5 py-0.5 rounded-md hover:ring-2'><Link to='/skills' > Skills </Link></li>
                 </div>
                  <div className='px-0.5 py-1 m-3'>
-                    <li className='text-white text-base hover:bg-slate-700 font-mono hover:text-shadow-white hover:duration-500 hover:p-1 px-0.5 py-0.5 rounded-md hover:ring-2'><Link to='/projects' > Projects </Link></li>
+                    <li className='text-white text-base hover:bg-slate-700 font-mono hover:text-shadow-white hover:duration-500 hover:p-1 px-0.5 py-0.5 rounded-md hover:ring-2'><Link to='/project' > Projects </Link></li>
                 </div>
                  <div className='px-0.5 py-1 m-3'>
                     <li className='text-white text-base hover:bg-slate-700 font-mono hover:text-shadow-white hover:duration-500 hover:p-1 px-0.5 py-0.5 rounded-md hover:ring-2'><Link to='/about' > About </Link></li>
