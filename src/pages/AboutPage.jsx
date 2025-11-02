@@ -180,7 +180,7 @@ const AboutPage = () => {
                     className="flex gap-2 bg-slate-950 w-100% rounded-xl p-1.5 mt-4 hover:scale-105 shadow-xl duration-500"
                   >
                     <h1 className="text-white">" {Sa?.appName} :"</h1>
-                    <h1 className="text-blue-500">{Sa?.profileURL}</h1>
+                    <a href={Sa?.profileURL} className="text-blue-500">{Sa?.profileURL}</a>
                   </div>
                   <p className="text-white mt-6">{" },"}</p>
                 </div>
