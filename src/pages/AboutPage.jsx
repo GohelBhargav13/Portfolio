@@ -189,12 +189,13 @@ const AboutPage = () => {
             <p className="font-bold text-orange-500 text-xl">{"] "}</p>
           </div>
         </div>
-        <div className="bg-black text-white font-mono p-2 m-4">
+        <div className="bg-black text-white font-mono p-2">
           <div className='"text-white font-bold font-mono text-center text-2xl sm:text-3xl bg-slate-700 w-fit mx-auto p-2 px-4 rounded-xl hover:scale-105 transition duration-500'>
             <h1 className="text-white font-bold text-3xl">For Contact</h1>
           </div>
 
-          <div className="bg-linear-to-b from-slate-700 to-black rounded-xl p-6 m-6">
+          <div className="bg-linear-to-b from-slate-700 to-black rounded-xl p-6 m-8">
+          
             {/* Node Mailer Design */}
             <h1 className="text-center text-xl mt-2">
               You can contact me via Email :{" "}
@@ -222,11 +223,11 @@ const AboutPage = () => {
                     />
                   </div>
                   <div className="flex gap-2 ml-4">
-                    <h1 className="text-yellow-600 mt-2">To: </h1>
+                    <h1 className="text-yellow-600 mt-2 ml-0.5">To: </h1>
                     <input
                       type="text"
                       value="gohelbhargavxxx@gmail.com"
-                      className="bg-slate-500 w-[250px] rounded-xl p-2 my-2 mt-1"
+                      className="bg-slate-500 w-[250px] rounded-xl p-2 my-2 mt-1 ml-4"
                       disabled
                     />
                   </div>
