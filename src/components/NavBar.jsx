@@ -33,7 +33,7 @@ const NavBar = () => {
       <nav className="bg-slate-800 shadow-lg shadow-black/60 border-b-2 border-gray-500 px-6 py-2">
         <div className="flex justify-between items-center flex-row sm:flex-row md:flex-row">
           {/* Left side - Motivation Quote */}
-          <div className="text-white font-mono p-1 rounded-lg text-[12px] sm:text-sm md:p-2 md:text-[16px] md:rounded-lg lg:rounded-xl lg-p-3 lg:text-lg max-w-[500px] bg-slate-700 font-bold">
+          <div className="text-white font-mono mr-3 mt-2 p-1 rounded-lg text-[11px] sm:text-sm md:p-2 md:text-[16px] md:rounded-lg lg:rounded-xl lg-p-3 lg:text-lg max-w-[500px] bg-slate-700 font-bold">
             <p>
               {"{ "}
               {motivationQuotes[quoteIndex]}
@@ -62,7 +62,7 @@ const NavBar = () => {
               <MenuIcon />
             </div>
 
-            <div className={`${isOpen && 'flex-col mt-2 ml-1 sm:ml-1 md:ml-2 lg:ml-3 transition-all duration-700 justify-items-center p-1 sm:p-1 md:p-2 lg:p-3 gap-1 font-mono text-white text-sm bg-slate-700 w-[140px] sm:w-[140px] md:w-60 lg:w-[190px] rounded-xl'}`}>
+            <div className={`${isOpen && 'flex-col mt-1 hover:border-b-2 hover:border-white sm:ml-1 md:ml-2 lg:ml-3 transition-all duration-700 justify-items-center p-1 sm:p-1 md:p-2 lg:p-3 gap-1 font-mono text-white text-sm bg-slate-700 w-[140px] sm:w-[140px] md:w-60 lg:w-[190px] rounded-xl'}`}>
              { isOpen && (
                <ul className={`mt-2 sm:mt-2 md:mt-2 lg:mt-3 text-sm sm:text-sm md:text-sm lg:text-lg ${isOpen ? 'transition duration-200' : ''}`}>
                 <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
