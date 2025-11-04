@@ -10,7 +10,7 @@ const Footer = () => {
           <img
             src={`https://ghchart.rshah.org/GohelBhargav13`}
             alt="Bhargav's GitHub chart"
-            className="mx-auto w-[480px] max-w-2xl sm:w-[480px] sm:mx-auto md:w-[510px] md:mx-auto lg:w-full lg:mx-auto"
+            className="mx-auto w-[300px] max-w-2xl sm:w-[480px] sm:mx-auto md:w-[510px] md:mx-auto lg:w-full lg:mx-auto"
           />
           <p className="text-gray-400 mt-2 text-[10px] sm:text-[12px] md:text-[16px] lg:text-lg lg:mt-4">
             © { new Date().getFullYear() } Built by Bhargav 🚀 | #BuiltByBhargav
