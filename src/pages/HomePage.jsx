@@ -1,4 +1,5 @@
 import CodeSection from "../components/CodeSection";
+import profileImage from "../assets/Bhargav_Image.jpg"
 
 const HomePage = () => {
   const profileData = {
@@ -19,9 +20,11 @@ const HomePage = () => {
         <div className="bg-linear-to-b from-gray-800 to-gray-900 hover:from-gray-700 hover:to-black rounded-xl p-5 transition-transform duration-300 hover:scale-105 shadow-lg shadow-black/70 max-w-lg 
         w-full mt-4 sm:mt-4">
           <div className="flex items-center text-sm md:text-base lg:text-lg gap-2">
+        
             <p className="font-bold text-orange-600 font-mono">const</p>
             <p className="font-bold text-yellow-400 font-mono">introPart =</p>
             <p className="font-mono text-white">{'{'}</p>
+      
           </div>
 
           <div className="mt-4 space-y-2">
