@@ -6,25 +6,23 @@ const CodeSection = () => {
   const codeStrings = [
     {
       projectName: "Tubex",
-      function:"Like a video",
-      snippets:`if (!video.videoLikes.includes(userId)) {
-        video.videoLikes.push(userId);
-        await video.save(); // Must Remember
+      function: "Like a video",
+      snippets: `if (!video.videoLikes.includes(userId)) {
+  video.videoLikes.push(userId);
+  await video.save(); // Must Remember
 
-      io.emit("VideoLikeUpdated", {
-        LikeCounts: video.videoLikes.length,
-            userId,
-            videoId,
-            message: "Video Liked",
-        });
-}
-            `,
+  io.emit("VideoLikeUpdated", {
+    LikeCounts: video.videoLikes.length,
+    userId,
+    videoId,
+    message: "Video Liked",
+  });
+}`,
     },
     {
       projectName: "Alumni Connect",
-      function:"Connect Friends",
-      snippets:`
-<?php
+      function: "Connect Friends",
+      snippets: `<?php
 require_once '../utills/db_conn.php';
 
 if (!isset($_SESSION['alumni_id'])) {
@@ -39,70 +37,62 @@ $fetch_friends_stmt = $conn->prepare($fetch_friends);
 ?>`,
     },
     {
-        projectName:"TaskHive",
-        function:"Show All Members",
-        snippets:` 
-const showAllMembers = async (req, res) => {
+      projectName: "TaskHive",
+      function: "Show All Members",
+      snippets: `const showAllMembers = async (req, res) => {
   const { projectId } = req.params;
   try {
-    const allUser = await ProjectMember.find({
-        project:projectId
-    }).select("-createdAt -updatedAt -__v -_id").populate("user","username")
+    const allUser = await ProjectMember.find({ project: projectId })
+      .select("-createdAt -updatedAt -__v -_id")
+      .populate("user", "username");
 
-    res.status(200).json(new ApiResponse(200,"Member's fetched successfully",allUser))
-
+    res.status(200).json(new ApiResponse(200, "Members fetched successfully", allUser));
   } catch (error) {
-    return res.status(500).json(new ApiError(500,"Internal Error to fetch members"))
+    return res.status(500).json(new ApiError(500, "Internal Error to fetch members"));
   }
-}; `
-    }
+};`,
+    },
   ];
 
   useEffect(() => {
     const intervalSet = setInterval(() => {
       setCodeShow((prev) => (prev + 1) % codeStrings.length);
-    }, 3000); // show new code every 3s
-
-    // When the component unmounts, clear the interval
+    }, 3500); // 3.5s rotation
     return () => clearInterval(intervalSet);
   }, []);
 
   return (
-    <div className="bg-[#0d1117] text-[#00ff95] font-mono p-5 rounded-lg shadow-lg w-[90%] md:w-[600px] border border-gray-700">
+    <div className="bg-[#0d1117] text-[#00ff95] font-mono p-4 rounded-lg shadow-lg border border-gray-700 w-[95%] sm:w-[85%] md:w-[600px] mx-auto transition-all duration-300">
+      {/* Top Bar */}
       <div className="flex space-x-2 mb-3">
         <span className="w-3 h-3 bg-red-500 rounded-full"></span>
         <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
         <span className="w-3 h-3 bg-green-500 rounded-full"></span>
       </div>
 
-    <div className="p-2 font-mono">
-    <div className="flex gap-3 p-2">
-    <p className="font-bold text-orange-700">const</p>
-    <p className="font-bold text-yellow-400">{ "projectSnippets =  " }</p>
-    <p className="font-bold text-white">{ " {" }</p>
-    </div>
+      {/* Code Section */}
+      <div className="text-sm sm:text-base md:text-[16px] leading-relaxed">
+        <div className="flex items-center gap-2 mb-2">
+          <p className="font-bold text-orange-700">const</p>
+          <p className="font-bold text-yellow-400">projectSnippets =</p>
+          <p className="font-bold text-white">{'{'}</p>
+        </div>
 
-<div className="mx-auto ml-10 w-100% h-auto">
-    <h1 className="font-bold text-xl flex">
-        <p className="text-gray-400 m-2">{"ProjectName: "}</p>
-        <p className="text-blue-400 m-2">
-            "{codeStrings[codeShow]?.projectName}"
-        </p>
-      </h1>
-      <h1 className="font-bold text-xl flex">
-        <p className="text-gray-400 m-2">{"Function: "}</p>
-         <pre className="text-xl transition-all duration-500 ease-in-out m-2">
-        "{codeStrings[codeShow]?.function}"
-      </pre>
-      </h1>
-      <h1 className="font-bold text-lg flex w-70%">
-        <p className="text-gray-400 m-2">{"Snippets: "}</p>
-        <p className="text-sm mt-3 transition-all duration-500 ease-in-out whitespace-pre-wrap justify-between">
-           " {codeStrings[codeShow]?.snippets}"
-        </p>
-      </h1>
-      </div>
-       <p className="font-bold mt-3 text-white">{ "} " }</p>
+        <div className="ml-5 sm:ml-7 md:ml-10">
+          <p className="text-gray-400 mb-1">
+            ProjectName: <span className="text-blue-400">"{codeStrings[codeShow]?.projectName}"</span>
+          </p>
+          <p className="text-gray-400 mb-1">
+            Function: <span className="text-blue-400">"{codeStrings[codeShow]?.function}"</span>
+          </p>
+
+          <p className="text-gray-400 mb-1">Snippets:</p>
+          <pre className="text-green-400 text-[12px] sm:text-sm md:text-[14px] bg-[#0d1117] p-2 rounded overflow-x-auto whitespace-pre-wrap border-l-2 border-green-400 transition-all duration-500 ease-in-out">
+            {codeStrings[codeShow]?.snippets}
+          </pre>
+        </div>
+
+        <p className="text-white mt-2">{'}'}</p>
       </div>
     </div>
   );

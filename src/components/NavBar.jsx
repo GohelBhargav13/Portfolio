@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MenuIcon } from "lucide-react";
 
 const NavBar = () => {
   const [quoteIndex, setquoteIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Motivaltional Quotes
   const motivationQuotes = [
@@ -21,17 +23,26 @@ const NavBar = () => {
     return () => clearInterval(intervals);
   }, []);
 
+  // handle Toogle Button
+  const handleToogle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <div>
       <nav className="bg-slate-800 shadow-lg shadow-black/60 border-b-2 border-gray-500 px-6 py-2">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-row sm:flex-row md:flex-row">
           {/* Left side - Motivation Quote */}
-          <div className="text-white font-mono md:text-lg max-w-[500px] bg-slate-700 p-3 rounded-xl font-bold">
-            <p>{"{ "}{motivationQuotes[quoteIndex]}{" }"}</p>
+          <div className="text-white font-mono text-sm sm:text-sm md:text-md lg:text-lg max-w-[500px] bg-slate-700 p-3 rounded-xl font-bold">
+            <p>
+              {"{ "}
+              {motivationQuotes[quoteIndex]}
+              {" }"}
+            </p>
           </div>
 
           {/* Right side - Navigation Links */}
-          <ul className="flex space-x-4">
+          <ul className="space-x-4 hidden sm:hidden md:flex md:space-x-1 lg:flex">
             <li className="text-white text-lg font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
               <Link to="/">Home</Link>
             </li>
@@ -45,6 +56,31 @@ const NavBar = () => {
               <Link to="/about">About</Link>
             </li>
           </ul>
+
+          <div className="text-white text-sm sm:text-sm md:text-md lg:text-lg md:hidden">
+            <div className="mt-2 cursor-pointer justify-items-end" onClick={handleToogle}>
+              <MenuIcon />
+            </div>
+
+            <div className={`${isOpen && 'flex-col mt-2 ml-3 transition-all duration-700 justify-items-center p-3 gap-1 font-mono text-white text-sm bg-slate-700 w-[200px] rounded-xl'}`}>
+             { isOpen && (
+               <ul className={`mt-3 text-lg ${isOpen ? 'transition duration-200' : ''}`}>
+                <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
+                  <Link to="/">Home</Link>
+                </li>
+                <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
+                  <Link to="/skills">Skills</Link>
+                </li>
+                <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
+                  <Link to="/project">Projects</Link>
+                </li>
+                <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
+                  <Link to="/about">About</Link>
+                </li>
+              </ul>
+             ) }
+            </div>
+          </div>
         </div>
       </nav>
     </div>
