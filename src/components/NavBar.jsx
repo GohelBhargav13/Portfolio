@@ -62,7 +62,7 @@ const NavBar = () => {
               <MenuIcon />
             </div>
 
-            <div className={`${isOpen && 'flex-col mt-2 ml-1 sm:ml-1 md:ml-2 lg:ml-3 transition-all duration-700 justify-items-center p-1 sm:p-1 md:p-2 lg:p-3 gap-1 font-mono text-white text-sm bg-slate-700 w-[200px] rounded-xl'}`}>
+            <div className={`${isOpen && 'flex-col mt-2 ml-1 sm:ml-1 md:ml-2 lg:ml-3 transition-all duration-700 justify-items-center p-1 sm:p-1 md:p-2 lg:p-3 gap-1 font-mono text-white text-sm bg-slate-700 w-[140px] sm:w-[140px] md:w-60 lg:w-[190px] rounded-xl'}`}>
              { isOpen && (
                <ul className={`mt-2 sm:mt-2 md:mt-2 lg:mt-3 text-sm sm:text-sm md:text-sm lg:text-lg ${isOpen ? 'transition duration-200' : ''}`}>
                 <li className="text-white font-mono hover:bg-slate-700 hover:ring-2 hover:ring-gray-400 px-3 py-1 rounded-md transition-all duration-300">
