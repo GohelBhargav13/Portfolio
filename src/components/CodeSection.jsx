@@ -62,7 +62,7 @@ $fetch_friends_stmt = $conn->prepare($fetch_friends);
   }, []);
 
   return (
-    <div className="bg-[#0d1117] text-[#00ff95] font-mono p-4 rounded-lg shadow-lg border border-gray-700 w-[95%] sm:w-[85%] md:w-[600px] mx-auto transition-all duration-300">
+    <div className="bg-[#0d1117] text-[#00ff95] font-mono p-4 rounded-lg shadow-lg border border-gray-700 w-[95%] sm:w-[85%] md:w-[600px] lg:w-[700px] mx-auto transition-all duration-300">
       {/* Top Bar */}
       <div className="flex space-x-2 mb-3">
         <span className="w-3 h-3 bg-red-500 rounded-full"></span>
