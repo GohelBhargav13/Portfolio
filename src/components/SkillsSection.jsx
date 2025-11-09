@@ -36,7 +36,7 @@ const SkillsSection = () => {
 
       {/* Skills Grid */}
       <div className="p-2 m-2">
-        <div className="grid grid-cols-1 w-fit ml-28 sm:ml-4 sm:text-sm md:ml-5 lg:ml-6 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-9">
+        <div className="grid grid-cols-1 w-fit ml-28 sm:ml-4 sm:text-sm md:ml-4 lg:ml-4 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-9">
           {skills.map((skill, idx) => (
             <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 ml-8 sm:ml-14 md:ml-15 lg:ml-18">
               
