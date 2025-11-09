@@ -33,7 +33,7 @@ const NavBar = () => {
       <nav className="bg-slate-800 shadow-lg shadow-black/60 border-b-2 border-gray-500 px-6 py-2">
         <div className="flex justify-between items-center flex-row sm:flex-row md:flex-row">
           {/* Left side - Motivation Quote */}
-          <div className="text-white font-mono mr-3 mt-1 p-1 rounded-lg text-[10px] sm:text-sm md:p-2 md:text-[16px] md:rounded-lg lg:rounded-xl lg-p-3 lg:text-lg max-w-[500px] w-[145px] sm:w-[200px] md:w-[240px] lg:w-[270px]  text-center bg-slate-700 font-bold">
+          <div className="text-white font-mono mr-3 mt-1 p-1 rounded-lg text-[10px] sm:text-sm md:p-2 md:text-[16px] md:rounded-lg lg:rounded-xl lg-p-3 lg:text-lg max-w-[500px] w-[150px] sm:w-[200px] md:w-[245px] lg:w-[270px]  text-center bg-slate-700 font-bold">
             <p>
               {"{ "}
               {motivationQuotes[quoteIndex]}

@@ -28,7 +28,7 @@ const SkillsSection = () => {
       </h1>
 
       {/* JavaScript-style Header */}
-      <div className="flex flex-wrap justify-start sm:justify-start gap-2 p-5 text-lg sm:text-xl md:text-2xl lg:text-2xl font-mono">
+      <div className="flex flex-wrap justify-start sm:justify-start gap-2 p-3 sm:p-3 md:p-4 lg:p-5 text-sm sm:text-lg md:text-xl lg:text-2xl font-mono">
         <p className="text-orange-500 font-bold">const</p>
         <p className="text-yellow-500 font-bold">Skills = </p>
         <p className="text-white">[</p>
@@ -36,9 +36,9 @@ const SkillsSection = () => {
 
       {/* Skills Grid */}
       <div className="p-2 m-2">
-        <div className="grid grid-cols-1 w-fit ml-4 sm:ml-5 md:ml-6 lg:ml-6 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8 md:gap-12">
+        <div className="grid grid-cols-1 w-fit ml-7 sm:ml-8 md:ml-9 lg:ml-10 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
           {skills.map((skill, idx) => (
-            <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 ml-11 sm:ml-16 md:ml-16 lg:ml-20">
+            <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 ml-9 sm:ml-14 md:ml-15 lg:ml-18">
               
               {/* Index */}
               <p className="font-mono text-gray-300 text-base sm:text-lg">{idx} :</p>
@@ -47,7 +47,7 @@ const SkillsSection = () => {
               <p className="text-xl sm:text-2xl text-gray-400">{'{'}</p>
 
               {/* Skill Card */}
-              <div className="bg-white/10 backdrop-blur-md font-mono text-sm ml-8 border-l-2 border-l-slate-400 hover:border-l-slate-900 sm:text-lg w-full md:text-[14px] md:w-[250px] lg:text-lg sm:w-fit p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+              <div className="bg-white/10 backdrop-blur-md font-mono text-sm ml-7 sm:ml-7 md:ml-8 lg:ml-9 border-l-2 border-l-slate-400 hover:border-l-slate-900 sm:text-lg w-full md:text-[14px] md:w-[250px] lg:text-lg sm:w-fit p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap gap-1">
                     <p className="text-sky-400 font-semibold">SkillName:</p>
@@ -68,7 +68,7 @@ const SkillsSection = () => {
       </div>
 
       {/* Array End Bracket */}
-      <p className="text-xl sm:text-2xl text-white ml-6 sm:ml-10">{']'}</p>
+      <p className="text-xl sm:text-2xl text-white ml-8 sm:ml-9 md:ml-10 lg:ml-11">{']'}</p>
     </div>
   )
 }
