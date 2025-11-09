@@ -46,6 +46,7 @@ const AboutPage = () => {
     },
   ];
 
+  // handle user click for message
   const handleUserClick = () => {
     try {
       setClick(true);
@@ -76,10 +77,10 @@ const AboutPage = () => {
         {/* Interests */}
         <div className="bg-slate-700 p-6 m-4 rounded-xl">
           <div className="flex gap-2">
-            <h1 className="text-yellow-400 font-bold text-xl">Interests = </h1>
-            <p className="text-orange-500 font-bold text-xl">[</p>
+            <h1 className="text-yellow-400 font-bold text-[15px] sm:text-[16px] md:text-[18px]">Interests = </h1>
+            <p className="text-orange-500 font-bold text-[15px] sm:text-[16px] md:text-[18px]">[</p>
           </div>
-          <div className="p-2 text-[15px]">
+          <div className="p-2 text-[14px] sm:text-[15px] md:text-[17px]">
             {Interests.map((skill, idx) => (
               <div
                 key={idx}
@@ -87,24 +88,24 @@ const AboutPage = () => {
               >
                 <p>{idx}: {"{"}</p>
                 <div className="bg-slate-950 w-fit rounded-xl p-2 mt-1 shadow-lg">
-                  <h1>" {skill} "</h1>
+                  <h1>"{skill}"</h1>
                 </div>
-                <p className="mt-4">{" },"}</p>
+                <p className="mt-3">{" },"}</p>
               </div>
             ))}
           </div>
-          <p className="font-bold text-orange-500 text-xl">{"] "}</p>
+          <p className="font-bold text-orange-500 text-[14px] sm:text-[15px] md:text-[17px]">{"] "}</p>
         </div>
 
         {/* Education Details */}
         <div className="bg-slate-700 p-6 m-4 rounded-xl">
           <div className="flex gap-2">
-            <h1 className="text-yellow-400 font-bold text-xl">
+            <h1 className="text-yellow-400 font-bold text-[15px] sm:text-[16px] md:text-[18px]">
               Education_Details ={" "}
             </h1>
-            <p className="text-orange-500 font-bold text-xl">[</p>
+            <p className="text-orange-500 font-bold text-[15px] sm:text-[16px] md:text-[18px]">[</p>
           </div>
-          <div className="p-2 text-[15px]">
+          <div className="p-2 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px]">
             {EducationDetails.map((Ed, idx) => (
               <div
                 key={idx}
@@ -115,19 +116,19 @@ const AboutPage = () => {
                   <div>
                     <p>
                       <span className="text-blue-600">Education:</span>{" "}
-                      <span className="text-green-600">" {Ed.name} ",</span>
+                      <span className="text-green-600">"{Ed.name}",</span>
                     </p>
                     <p>
                       <span className="text-blue-600">University:</span>{" "}
-                      <span className="text-green-600">" {Ed.university} ",</span>
+                      <span className="text-green-600">"{Ed.university}",</span>
                     </p>
                     <p>
                       <span className="text-blue-600">Duration:</span>{" "}
-                      <span className="text-green-600">" {Ed.duration} ",</span>
+                      <span className="text-green-600">"{Ed.duration}",</span>
                     </p>
                     <p>
                       <span className="text-blue-600">CGPA:</span>{" "}
-                      <span className="text-green-600">" {Ed.CGPA} ",</span>
+                      <span className="text-green-600">"{Ed.CGPA}",</span>
                     </p>
                   </div>
                 </div>
@@ -135,18 +136,18 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-          <p className="font-bold text-orange-500 text-xl">{"] "}</p>
+          <p className="font-bold text-orange-500 text-[14px] sm:text-[15px] md:text-[17px]">{"] "}</p>
         </div>
 
         {/* Social Links */}
         <div className="bg-slate-700 p-6 m-4 rounded-xl">
           <div className="flex gap-2">
-            <h1 className="text-yellow-400 font-bold text-xl">
+            <h1 className="text-yellow-400 font-bold text-[16px] sm:text-[17px] md:text-[18px]">
               Social_Links ={" "}
             </h1>
-            <p className="text-orange-500 font-bold text-xl">[</p>
+            <p className="text-orange-500 font-bold text-[16px] sm:text-[17px] md:text-[18px]">[</p>
           </div>
-          <div className="p-2 text-[15px]">
+          <div className="p-2 text-[9px] sm:text-[10px] md:text-[10px] lg:text-[15px]">
             {socialActive.map((Sa, idx) => (
               <div
                 key={idx}
@@ -154,7 +155,7 @@ const AboutPage = () => {
               >
                 <p>{idx}: {"{"}</p>
                 <div className="flex gap-2 bg-slate-950 rounded-xl p-2 mt-2 shadow-lg w-fit">
-                  <h1 className="text-[14px]">"{Sa.appName}:"</h1>
+                  <h1 className="font-bold">"{Sa.appName}:"</h1>
                   <a
                     href={Sa.profileURL}
                     className="text-blue-400 break-all hover:underline"
@@ -162,16 +163,16 @@ const AboutPage = () => {
                     {Sa.profileURL}
                   </a>
                 </div>
-                <p className="mt-4">{" },"}</p>
+                <p className="mt-3">{" },"}</p>
               </div>
             ))}
           </div>
-          <p className="font-bold text-orange-500 text-xl">{"] "}</p>
+          <p className="font-bold text-orange-500 text-[16px] sm:text-[17px] md:text-[18px]">{"] "}</p>
         </div>
       </div>
 
       {/* Contact Section */}
-      <div className="bg-black p-6 mt-6 rounded-xl text-center">
+      <div className="bg-black p-6 mt-10 sm:mt-10 md:mt-8 lg:mt-7 rounded-xl text-center">
         <h1 className="text-3xl font-bold bg-slate-700 inline-block px-4 py-2 rounded-xl hover:scale-105 transition">
           For Contact
         </h1>
@@ -179,7 +180,7 @@ const AboutPage = () => {
           You can contact me via Email :
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-left text-[14px] sm:text-[15px] md:text-[15px] lg:text-[16px]">
           <div className="px-4">
             <p>
              <span className="text-orange-500 mr-2">const</span>
