@@ -15,10 +15,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-linear-to-b from-gray-800 to-black text-white flex flex-col justify-center items-center px-4">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 lg:gap-32">
+      <div className="flex flex-col md:flex-col lg:flex-row items-center justify-center gap-12 md:gap-20 lg:gap-32">
         {/* Left Section - Profile Info */}
         <div className="bg-linear-to-b from-gray-800 to-gray-900 hover:from-gray-700 hover:to-black rounded-xl p-5 transition-transform duration-300 hover:scale-105 shadow-lg shadow-black/70 max-w-lg 
-        w-full mt-4 sm:mt-4">
+        w-full mt-4 sm:mt-4 sm:w-[400px] md:w-[460px] lg:w-[500px]">
           <div className="flex items-center text-sm md:text-base lg:text-lg gap-2">
         
             <p className="font-bold text-orange-600 font-mono">const</p>
