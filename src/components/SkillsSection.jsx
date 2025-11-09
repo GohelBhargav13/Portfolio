@@ -36,18 +36,21 @@ const SkillsSection = () => {
 
       {/* Skills Grid */}
       <div className="p-2 m-2">
-        <div className="grid grid-cols-1 w-fit ml-7 sm:ml-8 md:ml-9 lg:ml-10 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-10">
+        <div className="grid grid-cols-1 w-fit ml-28 sm:ml-4 sm:text-sm md:ml-5 lg:ml-6 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-9">
           {skills.map((skill, idx) => (
-            <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 ml-9 sm:ml-14 md:ml-15 lg:ml-18">
+            <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center gap-2 ml-8 sm:ml-14 md:ml-15 lg:ml-18">
               
               {/* Index */}
-              <p className="font-mono text-gray-300 text-base sm:text-lg">{idx} :</p>
+              <div className='flex gap-1 sm:gap-2'>
+              <p className="font-mono text-gray-300 text-base sm:text-[16px]">{idx}</p>
+              <p className=''>:</p>
+              </div>
 
               {/* Curly Bracket Opening */}
               <p className="text-xl sm:text-2xl text-gray-400">{'{'}</p>
 
               {/* Skill Card */}
-              <div className="bg-white/10 backdrop-blur-md font-mono text-sm ml-7 sm:ml-7 md:ml-8 lg:ml-9 border-l-2 border-l-slate-400 hover:border-l-slate-900 sm:text-lg w-full md:text-[14px] md:w-[250px] lg:text-lg sm:w-fit p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+              <div className="bg-white/10 backdrop-blur-md font-mono text-sm  sm:text-[13px] sm:flex ml-7 sm:ml-7 md:ml-8 lg:ml-8 border-l-2 border-l-slate-400 hover:border-l-slate-900 sm:text-lg w-full md:text-[14px] md:w-[250px] lg:text-[16px] sm:w-fit p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                 <div className="flex flex-col gap-2">
                   <div className="flex flex-wrap gap-1">
                     <p className="text-sky-400 font-semibold">SkillName:</p>
