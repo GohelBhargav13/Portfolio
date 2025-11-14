@@ -14,7 +14,8 @@ const ProjectSection = () => {
         linkedVideo : 'Users can Like & Comment (live via Socket.io)',
         adminPanel : 'Admin can manage videos and users'
       }`,
-      tools: "['Git', 'GitHub', 'Postman API']"
+      tools: "['Git', 'GitHub', 'Postman API']",
+      live_on:"https://tube-x.vercel.app/"
     },
     { 
       title: "SkillSwap Network",
@@ -105,6 +106,19 @@ const ProjectSection = () => {
                 "{project.link}"
               </a>
             </div>
+            { project.live_on && (
+              <div className="flex flex-wrap gap-2">
+              <h1 className="text-yellow-300 font-bold">Live On:</h1>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline hover:text-blue-300"
+              >
+                "{project.live_on}"
+              </a>
+            </div>
+            ) }
           </div>
 
           <p className="font-bold text-orange-400 mt-2 text-sm sm:text-base md:text-lg">{"},"}</p>
