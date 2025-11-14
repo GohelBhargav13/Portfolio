@@ -108,14 +108,14 @@ const ProjectSection = () => {
             </div>
             { project.live_on && (
               <div className="flex flex-wrap gap-2">
-              <h1 className="text-yellow-300 font-bold">Live On:</h1>
+              <h1 className="text-yellow-300 font-bold">Live on:</h1>
               <a
-                href={project.link}
+                href={project?.live_on}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 underline hover:text-blue-300"
               >
-                "{project.live_on}"
+                "{project?.live_on}"
               </a>
             </div>
             ) }
