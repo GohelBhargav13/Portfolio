@@ -17,7 +17,7 @@ A website that is all about ME !
 - Enhance UI
 
 ## 👀 Link to visit
-- [{GET /aboutME}](https://portfolio-o8a1.vercel.app/)
+- <a href='https://portfolio-o8a1.vercel.app/' target="_blank">{ GET /aboutME }
 
 ## 👨‍💻 Author
 - Bhargav Gohel
