@@ -16,7 +16,7 @@ const ProjectPage = () => {
   }
   return (
     <div>
-        <div className='bg-linear-to-b from-slate-800 to-black font-mono text-white p-2'>
+        <div className='bg-linear-to-b from-slate-800 to-black font-mono text-white p-2 h-full min-h-screen'>
             <h1 className='text-white font-bold font-mono text-center text-lg sm:text-xl md:text-2xl lg:text-3xl bg-slate-700 w-fit mx-auto py-3 px-3 rounded-xl hover:scale-105 transition duration-500'>Projects</h1>
             <div className='justify-start p-2 m-2 bg-slate-900 rounded-md shadow-lg shadow-black/60 border-2 border-gray-500'>
                 <div className='flex gap-2 text-[16px] sm:text-[19px] md:text-[20px] lg:text-[21px]'>
