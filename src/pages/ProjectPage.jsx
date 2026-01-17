@@ -38,7 +38,7 @@ const ProjectPage = () => {
                         <h1 className='text-orange-500 font-bold'>await </h1>
                         <div className='flex'>
                         <h1 className='text-pink-600 font-bold'>fetch</h1>
-                        <h1 className='text-yellow-600 font-bold flex gap-0.5'>(<p className='text-green-500'>`https://api.github.com/GohelBhargav13/projects`,</p>{"["}</h1>
+                        <h1 className='text-yellow-600 font-bold flex gap-0.5'>(<p className='text-green-500/80'>`https://api.github.com/GohelBhargav13/projects`,</p>{"["}</h1>
                         </div>
                   </div>
                   { isProjectShow ? <ProjectSection /> : <button className={`flex mx-auto mt-15 text-[24px] m-8 p-2 rounded-xl font-bold  border-r-4 border-r-white border-b-4 border-b-white border-t-2 border-white border-l-2 ${ isFetchingProject ? "bg-red-400/60 cursor-not-allowed" : "bg-red-500/40  hover:border-r-2 hover:border-b-2 hover:border-r-white hover:border-b-white hover:duration-500 hover:ease-in cursor-pointer"}`} onClick={handleGettingProject}>{ isFetchingProject ? <Loader2 className='font-bold w-full h-full justify-items-center animate-spin' /> : "GET /projects" }</button> }
