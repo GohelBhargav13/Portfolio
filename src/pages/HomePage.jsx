@@ -10,7 +10,7 @@ const HomePage = () => {
        and personal projects using MERN and PHP/MySQL stacks with some DevOps tools like Docker
        and AWS (EC2, S3, ECR, ECS...).`,
     resumeLink:
-      "https://drive.google.com/file/d/1REqk2uKh2hPL5l7RkcilrsW_GGOtmtPD/view?usp=drive_link",
+      "https://drive.google.com/file/d/1_8OweEQ223Jfv-gnioJJ0vDQdJuSugcZ/view?usp=drivesdk",
   };
 
   return (

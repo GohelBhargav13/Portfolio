@@ -52,6 +52,23 @@ $fetch_friends_stmt = $conn->prepare($fetch_friends);
   }
 };`,
     },
+    {
+      projectName: "DevHub",
+      function: "Handle New Link & delete a link",
+      snippets: `  // Handle a new link section
+  const newLinkHandler = () => {
+    if(!currLink.trim()) return
+
+    setPostLink((prev) => [...prev,currLink])
+    toast.success("New Link Added")
+    setCurrLink("")
+  }
+  
+  // Handle a delete link
+  const handleDeleteLink = (index) => {
+    setPostLink((prev) => prev.filter((_,i) => i !== index))
+  }`,
+    },
   ];
 
   useEffect(() => {
