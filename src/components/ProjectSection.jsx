@@ -159,7 +159,7 @@ const ProjectSection = () => {
                   </div>
                   ) }
                 </div>
-              ) : <div className='text-[18px] font-bold text-black/50 animate-pulse'>Want to explore more? Toggle to view full project details.</div>}
+              ) : <div className='text-[18px] font-bold text-black/70 animate-pulse'>Want to explore more? Toggle to view full project details.</div>}
             </div>
             <p className="font-bold text-orange-400 mt-2 text-sm sm:text-base md:text-lg">{"},"}</p>
           </div>
