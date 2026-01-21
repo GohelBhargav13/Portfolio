@@ -19,6 +19,20 @@ const ProjectSection = () => {
       tools: "['Git', 'GitHub', 'Postman API','docker']",
       live_on:"https://devhub-self.vercel.app/"
     },
+     { 
+      title: "Personal Portfolio",
+      techStack: "[ 'ReactJs','TailwindCSS','lucide-react(icons)' ]", 
+      description: "A personal portfolio website that contains all information about me.", 
+      link: "https://github.com/GohelBhargav13/Portfolio",
+      functions: `{ 
+        details : 'All details about me',
+        skills: 'My skills section',
+        projects: 'My projects section',
+        interests:'My interests section',
+      }`,
+      tools: "['Git', 'GitHub']",
+      live_on:"https://portfolio-o8a1.vercel.app/"
+    },
     { 
       title: "TubeX",
       techStack: "[ 'ReactJs', 'ExpressJs', 'MongoDB', 'Socket.io', 'mongoose', 'JWT', 'ffmpeg', 'AWS S3', 'TailwindCSS' ]", 
