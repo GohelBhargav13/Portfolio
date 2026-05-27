@@ -3,6 +3,21 @@ import { ChevronDown,ChevronUp } from "lucide-react"
 
 const ProjectSection = () => {
   const Projects = [
+     { 
+      title: "PassAI - AI powered paper analyzer tool",
+      techStack: "[ 'ReactJs', 'flask', 'mysql', 'redis' ]", 
+      description: "An AI powered paper analyzer for the GTU students, Now students can easily analyze there papers with ease.", 
+      link: "https://github.com/GohelBhargav13/passAI",
+      functions: `{ 
+        uploadPaper : 'upload any GTU paper',
+        searchHistory: 'students find there paper analysis on the app'
+        saveResponse: 'students are able to save there response with minimal authentication'
+        minAuth:'minimal authentication with OTP for save paper analysis',
+        theme:'theme toggle user can choose a theme preference in dark and light',
+      }`,
+      tools: "['Git', 'GitHub', 'Postman API','docker', 'GROQ API']",
+      live_on:"https://pass-ai-pro.vercel.app/"
+    },
     { 
       title: "DevHub",
       techStack: "[ 'ReactJs', 'ExpressJs', 'Postgresql', 'Socket.io', 'drizzle', 'JWT', 'TailwindCSS' ]", 
