@@ -63,6 +63,20 @@ const ProjectSection = () => {
       tools: "['Git', 'GitHub', 'Postman API']",
       live_on:"https://tube-x.vercel.app/"
     },
+     { 
+      title: "AlumniConnect",
+      techStack: "[ 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap' ]", 
+      description: "A bridge between Students and Alumni — post jobs, apply, and connect.", 
+      link: "https://github.com/GohelBhargav13/AlumniConnect",
+      functions: `{ 
+        postJob : 'Alumni can post job opportunities',
+        applyJob : 'Students can apply for jobs',
+        connectionRequest : 'Students send connection requests',
+        adminPanel : 'Admin manages users and jobs'
+      }`,
+      tools: "['Git', 'GitHub', 'XAMPP']",
+      live_on: "https://alumniconnect.infinityfree.io/alumni/landing.php"
+    },
     { 
       title: "SkillSwap Network",
       techStack: "[ 'ReactJs', 'ExpressJs', 'MongoDB', 'Socket.io', 'mongoose', 'JWT' ]", 
@@ -74,19 +88,6 @@ const ProjectSection = () => {
         LiveFeatures : 'Like & comment on posts (real-time via Socket.io)'
       }`,
       tools: "['Git', 'GitHub', 'Postman API']"
-    },
-    { 
-      title: "AlumniConnect",
-      techStack: "[ 'HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap' ]", 
-      description: "A bridge between Students and Alumni — post jobs, apply, and connect.", 
-      link: "https://github.com/GohelBhargav13/AlumniConnect",
-      functions: `{ 
-        postJob : 'Alumni can post job opportunities',
-        applyJob : 'Students can apply for jobs',
-        connectionRequest : 'Students send connection requests',
-        adminPanel : 'Admin manages users and jobs'
-      }`,
-      tools: "['Git', 'GitHub', 'XAMPP']"
     },
     { 
       title: "TaskHive (Backend Project)",
